@@ -1,0 +1,3 @@
+import { Link } from 'react-router-dom';
+import { LogoPlaceholder } from './LogoPlaceholder';
+export function AuthLayout({ title, subtitle, children, footer }) { return <div className="min-h-screen bg-[#f8f7f2] px-4 py-8"><div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-md flex-col justify-center"><Link to="/" className="mx-auto mb-8"><LogoPlaceholder/></Link><div className="rounded-3xl border border-[#dfe5dc] bg-white p-6 shadow-xl shadow-[#18332b]/5 sm:p-8"><div className="mb-7 text-center"><h1 className="text-3xl font-bold tracking-tight text-[#18332b]">{title}</h1><p className="mt-2 text-sm leading-6 text-[#74857d]">{subtitle}</p></div>{children}</div>{footer && <p className="mt-5 text-center text-sm text-[#74857d]">{footer}</p>}</div></div>; }
