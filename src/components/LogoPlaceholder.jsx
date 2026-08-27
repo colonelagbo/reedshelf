@@ -10,7 +10,7 @@ export function LogoPlaceholder({ compact = false, dark = false }) {
       <img
         src={ReedShelfLogo}
         alt="ReedShelf"
-        className={compact ? "h-8 w-auto" : "h-20 w-auto"}
+        className={compact ? "h-8 w-auto" : "h-25 w-auto"}
       />
     </span>
   );
