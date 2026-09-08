@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, BookOpen, Check } from "lucide-react";
+import { WEBAPP_URL } from "../lib/constants";
 
 export const HeroSection = () => {
   const cardRef = useRef(null);
@@ -60,7 +61,7 @@ export const HeroSection = () => {
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
-              href={`${import.meta.env.VITE_WEBAPP_URL || "http://localhost:5174"}/register`}
+              href={WEBAPP_URL}
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#009689] px-7 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#d6a84a] hover:text-[#0b1619]"
               style={{ animation: "pulse-ring 2.6s ease-out infinite" }}
             >

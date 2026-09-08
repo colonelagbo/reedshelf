@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { WEBAPP_URL } from "../lib/constants";
 
 export const CTASection = () => (
   <section id="get-started" className="bg-[#f6f4ee] px-6 pb-20 transition-colors duration-300 dark:bg-[#0b1619] lg:px-8 lg:pb-28">
@@ -17,7 +18,7 @@ export const CTASection = () => (
           plan, and keep track of their reading.
         </p>
         <a
-          href={`${import.meta.env.VITE_WEBAPP_URL || "http://localhost:5174"}/register`}
+          href={WEBAPP_URL}
           className="group relative mt-8 inline-flex items-center gap-2 rounded-full bg-[#009689] px-7 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#d6a84a] hover:text-[#0b1619]"
         >
           Explore ReedShelf <ArrowRight size={18} className="transition group-hover:translate-x-1" />

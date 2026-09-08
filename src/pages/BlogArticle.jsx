@@ -5,6 +5,7 @@ import { ArrowLeft, Clock, Calendar, Tag, ArrowUpRight, BookOpen } from "lucide-
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { getPostBySlug, getAllPosts } from "../data/posts";
+import { WEBAPP_URL } from "../lib/constants";
 
 export const BlogArticle = () => {
   const { slug } = useParams();
@@ -153,12 +154,12 @@ export const BlogArticle = () => {
                   Track books, set reading paces, and build your mindful reading library on ReedShelf.
                 </p>
               </div>
-              <Link
-                to="/#get-started"
+              <a
+                href={WEBAPP_URL}
                 className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#0b1619] px-6 py-3 font-semibold text-white transition hover:bg-[#d6a84a] hover:text-[#0b1619]"
               >
                 Get started
-              </Link>
+              </a>
             </div>
           </div>
 

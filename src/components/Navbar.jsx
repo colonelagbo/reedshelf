@@ -3,8 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { LogoLink } from "./LogoPlaceholder";
 import { ThemeToggle } from "./ThemeToggle";
-
-const WEBAPP = import.meta.env.VITE_WEBAPP_URL || "http://localhost:5174";
+import { WEBAPP_URL } from "../lib/constants";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -79,7 +78,7 @@ export const Navbar = () => {
           )}
 
           <a
-            href={`${WEBAPP}/register`}
+            href={WEBAPP_URL}
             className="rounded-full bg-[#009689] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#d6a84a] hover:text-[#0b1619]"
           >
             Get started
@@ -146,7 +145,7 @@ export const Navbar = () => {
             )}
 
             <a
-              href={`${WEBAPP}/register`}
+              href={WEBAPP_URL}
               onClick={() => setOpen(false)}
               className="mt-1 w-fit rounded-full bg-[#009689] px-4 py-2 text-sm font-semibold text-white"
             >
